@@ -1,0 +1,16 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  dictionary-lookup:
+    lang: node20
+    handler: ./dictionary-lookup
+    image: 22521284/dictionary-lookup:latest
+
+
+  translator:
+    lang: python3-flask-debian
+    handler: ./translator
+    image: 22521284/translator:latest
+
